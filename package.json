@@ -1,0 +1,31 @@
+{
+  "name": "rsschool-clean-code-todo",
+  "version": "1.0.0",
+  "description": "Учебный репозиторий для задания «Clean Code» курса RS School Fullstack Engineering.",
+  "main": "app.js",
+  "scripts": {
+    "format": "prettier . --write",
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maeb44/clean-code-todo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/maeb44/clean-code-todo/issues"
+  },
+  "homepage": "https://github.com/maeb44/clean-code-todo#readme",
+  "devDependencies": {
+    "@eslint/css": "^2.0.1",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.13.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.10"
+  }
+}
