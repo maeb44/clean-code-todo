@@ -91,10 +91,6 @@ const editTask = function () {
 
 //Delete task.
 const deleteTask = function () {
-<<<<<<< HEAD
-=======
-
->>>>>>> e9b06dd (fix: resolve remaining eslint issues)
   const listItem = this.parentNode;
   const ul = listItem.parentNode;
   //Remove the parent list item from the ul.
@@ -103,10 +99,6 @@ const deleteTask = function () {
 
 //Mark task completed
 const taskCompleted = function () {
-<<<<<<< HEAD
-=======
-
->>>>>>> e9b06dd (fix: resolve remaining eslint issues)
   //Append the task list item to the #completed-tasks
   const listItem = this.parentNode;
   completedTasksHolder.appendChild(listItem);
