@@ -7,36 +7,49 @@ const addButton = document.getElementsByTagName("button")[0];
 const incompleteTaskHolder = document.getElementById("incompleteTasks");
 const completedTasksHolder = document.getElementById("completed-tasks");
 
-const createNewTaskElement = function (taskString) {
-  const listItem = document.createElement("li");
-
+const createCheckbox = function () {
   const checkBox = document.createElement("input");
+  checkBox.type = "checkbox";
+  return checkBox;
+};
+
+const createLabel = function (taskString) {
   const label = document.createElement("label");
-  const editInput = document.createElement("input");
-  const editButton = document.createElement("button");
-
-  const deleteButton = document.createElement("button");
-  const deleteButtonImg = document.createElement("img");
-
   label.innerText = taskString;
   label.className = "task";
+  return label;
+};
 
-  checkBox.type = "checkbox";
+const createEditInput = function () {
+  const editInput = document.createElement("input");
   editInput.type = "text";
   editInput.className = "task";
+  return editInput;
+};
 
-  editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
+const createEditButton = function () {
+  const editButton = document.createElement("button");
+  editButton.innerText = "Edit"; // innerText encodes special characters, HTML does not.
   editButton.className = "edit";
+  return editButton;
+};
 
+const createDeleteButton = function () {
+  const deleteButton = document.createElement("button");
   deleteButton.className = "delete";
+  const deleteButtonImg = document.createElement("img");
   deleteButtonImg.src = "./remove.svg";
   deleteButton.appendChild(deleteButtonImg);
+  return deleteButton;
+};
 
-  listItem.appendChild(checkBox);
-  listItem.appendChild(label);
-  listItem.appendChild(editInput);
-  listItem.appendChild(editButton);
-  listItem.appendChild(deleteButton);
+const createNewTaskElement = function (taskString) {
+  const listItem = document.createElement("li");
+  listItem.appendChild(createCheckbox());
+  listItem.appendChild(createLabel(taskString));
+  listItem.appendChild(createEditInput());
+  listItem.appendChild(createEditButton());
+  listItem.appendChild(createDeleteButton());
   return listItem;
 };
 
